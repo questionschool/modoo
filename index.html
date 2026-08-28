@@ -326,10 +326,18 @@
 
   /* ---------- 낭독 모임 ---------- */
   .bookclub{ background:#fff; }
-  .bookclub .wrap{ display:grid; gap:clamp(20px,4vw,56px); }
+  .bc-figure{
+    margin:0 0 clamp(28px,4vw,48px);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    line-height:0;
+  }
+  .bc-figure img{ width:100%; height:auto; }
+  .bc-grid{ display:grid; gap:clamp(20px,4vw,56px); }
   @media (min-width:820px){
-    .bookclub .wrap{ grid-template-columns:.8fr 1.2fr; align-items:start; }
-    .bookclub h2{ margin-bottom:0; }
+    .bc-grid{ grid-template-columns:.8fr 1.2fr; align-items:start; }
+    .bc-grid h2{ margin-bottom:0; }
   }
   .bc-body p:last-of-type{ margin-bottom:26px; }
 
@@ -589,20 +597,27 @@
   <!-- 낭독 모임 -->
   <section class="bookclub" id="bookclub">
     <div class="wrap">
-      <p class="eyebrow">함께 읽는 시간</p>
-      <h2>모두의 새벽<br />낭만북클럽</h2>
-      <div class="bc-body">
-        <p class="lead">
-          평일 새벽, 한자리에 모여 소리 내어 책을 읽습니다.
-        </p>
-        <p>
-          한 시즌에 한 권씩, 하루에 십여 쪽을 함께 읽어 나갑니다.
-          상담실 밖에서 이어지는 또 하나의 자리이자, 혼자였다면 끝까지 읽지 못했을 책을
-          여럿의 목소리로 완주하는 시간입니다.
-        </p>
-        <a class="btn btn-ghost" href="https://bookclub.questionschool.net/" target="_blank" rel="noopener">
-          모임 자세히 보기 ↗
-        </a>
+      <figure class="bc-figure">
+        <img src="images/bookclub.png" alt="모두의 새벽 + 낭만북클럽 이번 시즌 안내 이미지" width="1200" height="630" loading="lazy" />
+      </figure>
+      <div class="bc-grid">
+        <div>
+          <p class="eyebrow">함께 읽는 시간</p>
+          <h2>모두의 새벽<br />낭만북클럽</h2>
+        </div>
+        <div class="bc-body">
+          <p class="lead">
+            평일 새벽 여섯 시, 한자리에 모여 소리 내어 책을 읽습니다.
+          </p>
+          <p>
+            한 시즌에 한 권씩, 하루에 십여 쪽을 한 시간 동안 함께 읽어 나갑니다.
+            상담실 밖에서 이어지는 또 하나의 자리이자, 혼자였다면 끝까지 읽지 못했을 책을
+            여럿의 목소리로 완주하는 시간입니다.
+          </p>
+          <a class="btn btn-ghost" href="https://bookclub.questionschool.net/" target="_blank" rel="noopener">
+            이번 시즌 보기 ↗
+          </a>
+        </div>
       </div>
     </div>
   </section>
