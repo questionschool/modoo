@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>대구모두심리상담센터 | 김이영 심리상담사</title>
-<meta name="description" content="대구 서구의 작은 상담공간. 개인·부부·가족 상담. 대면·화상·전화상담 가능. 문의 010-7544-7720" />
+<title>대구모두심리상담센터 | 김이영 심리상담사 · TCI 기질검사</title>
+<meta name="description" content="대구 서구의 작은 상담공간. 개인·부부·가족 상담, TCI 기질 및 성격검사. 대면·화상·전화상담 가능. 문의 010-7544-7720" />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="대구모두심리상담센터" />
@@ -118,6 +118,14 @@
     transition:color .2s, border-color .2s;
   }
   nav a:hover, nav a:focus-visible{ color:var(--ink); border-color:var(--peri); }
+  .nav-blog{ color:var(--indigo); font-weight:600; }
+  .nav-blog::after{
+    content:"↗";
+    font-size:11px;
+    margin-left:3px;
+    vertical-align:1px;
+    color:var(--peri);
+  }
   .nav-hide{ display:none; }
   @media (min-width:640px){ .nav-hide{ display:inline; } }
 
@@ -208,6 +216,14 @@
     font-size:17px;
     color:var(--indigo);
   }
+  .dateline{
+    display:block;
+    margin-top:8px;
+    font-family:var(--body);
+    font-size:13px;
+    letter-spacing:.04em;
+    color:var(--muted);
+  }
 
   /* ---------- 상담사 ---------- */
   .profile{ display:grid; gap:clamp(32px,5vw,64px); }
@@ -233,6 +249,11 @@
     line-height:1.2;
     color:var(--indigo);
   }
+  .figure b small{
+    font-size:.55em;
+    color:var(--peri);
+    margin-left:1px;
+  }
   .figure span{ font-size:13px; color:var(--muted); }
 
   .creds{ list-style:none; margin:0; padding:0; }
@@ -256,6 +277,20 @@
     color:var(--indigo);
   }
   .note{ font-size:14px; color:var(--muted); margin-top:26px; }
+
+  .assess{
+    margin-top:44px;
+    padding-top:34px;
+    border-top:1px solid var(--line);
+    max-width:620px;
+  }
+  .assess-title{
+    font-family:var(--display);
+    font-size:clamp(19px,2.6vw,23px);
+    color:var(--indigo);
+    margin:0 0 14px;
+  }
+  .assess p:last-child{ margin-bottom:0; font-size:15px; }
 
   /* ---------- 경력 ---------- */
   .cols{ display:grid; gap:clamp(28px,4vw,56px); }
@@ -288,6 +323,15 @@
   .card b{ display:block; font-size:16px; margin-bottom:8px; color:#fff; }
   .card p{ margin:0; font-size:14.5px; color:#B9BCD2; line-height:1.75; }
   .play .tail{ margin-top:30px; font-size:14.5px; color:#B9BCD2; }
+
+  /* ---------- 낭독 모임 ---------- */
+  .bookclub{ background:#fff; }
+  .bookclub .wrap{ display:grid; gap:clamp(20px,4vw,56px); }
+  @media (min-width:820px){
+    .bookclub .wrap{ grid-template-columns:.8fr 1.2fr; align-items:start; }
+    .bookclub h2{ margin-bottom:0; }
+  }
+  .bc-body p:last-of-type{ margin-bottom:26px; }
 
   /* ---------- 오시는 길 ---------- */
   .visit .wrap{ display:grid; gap:clamp(28px,4vw,56px); }
@@ -351,6 +395,7 @@
       <a href="#profile">상담사</a>
       <a href="#topics" class="nav-hide">상담 영역</a>
       <a href="#visit">오시는 길</a>
+      <a href="https://blog.naver.com/ggetmam" target="_blank" rel="noopener" class="nav-blog">블로그</a>
     </nav>
   </div>
 </header>
@@ -399,7 +444,7 @@
         누구나, 모두가 조금 덜 두렵고 조금 더 안심이 되기를. 조금 덜 외롭고 조금 더 즐겁기를.
         그 마음으로 계속 공부하고, 모두의 삶을 존중하는 자리를 지켜가겠습니다.
       </p>
-      <p class="sign">— 심리상담사 김이영 드림</p>
+      <p class="sign">— 심리상담사 김이영 드림<span class="dateline">2024년 11월 4일</span></p>
     </div>
   </section>
 
@@ -413,7 +458,7 @@
         <p class="eyebrow">상담사</p>
         <h2>김이영<br />심리상담사</h2>
         <div class="figures">
-          <div class="figure"><b>10년</b><span>상담 현장 경력</span></div>
+          <div class="figure"><b>10년<small>+</small></b><span>상담 현장 경력</span></div>
           <div class="figure"><b>8,000<small>회기+</small></b><span>누적 상담 회기</span></div>
         </div>
         <p>
@@ -456,6 +501,16 @@
       <p class="note">
         어떤 이야기부터 꺼내야 할지 모르겠다면, 그 막막함에서 시작해도 괜찮습니다.
       </p>
+
+      <div class="assess">
+        <h3>심리검사</h3>
+        <p class="assess-title">TCI 기질 및 성격검사</p>
+        <p>
+          타고난 기질과 살아오며 형성된 성격을 나누어 살펴보는 검사입니다.
+          "나는 왜 자꾸 이렇게 반응할까"라는 물음에 실마리를 줍니다.
+          검사만 받으실 수도 있고, 결과 해석 상담까지 함께 진행하실 수도 있습니다.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -490,7 +545,6 @@
             <li>초·중·고등학교 집단상담</li>
             <li>‘인문소양 기르기’ 수업</li>
             <li>아셈북클럽 심리치유독서 프로그램</li>
-            <li>모두의 새벽 · 낭만북클럽 낭독 모임</li>
           </ul>
         </div>
       </div>
@@ -532,6 +586,27 @@
     </div>
   </section>
 
+  <!-- 낭독 모임 -->
+  <section class="bookclub" id="bookclub">
+    <div class="wrap">
+      <p class="eyebrow">함께 읽는 시간</p>
+      <h2>모두의 새벽<br />낭만북클럽</h2>
+      <div class="bc-body">
+        <p class="lead">
+          평일 새벽, 한자리에 모여 소리 내어 책을 읽습니다.
+        </p>
+        <p>
+          한 시즌에 한 권씩, 하루에 십여 쪽을 함께 읽어 나갑니다.
+          상담실 밖에서 이어지는 또 하나의 자리이자, 혼자였다면 끝까지 읽지 못했을 책을
+          여럿의 목소리로 완주하는 시간입니다.
+        </p>
+        <a class="btn btn-ghost" href="https://bookclub.questionschool.net/" target="_blank" rel="noopener">
+          모임 자세히 보기 ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- 오시는 길 -->
   <section class="visit" id="visit">
     <div class="wrap">
@@ -543,6 +618,7 @@
           <li><b>대면상담</b><span>상담실에서 마주 앉아</span></li>
           <li><b>화상상담</b><span>어디에서든 화면으로</span></li>
           <li><b>전화상담</b><span>목소리만으로도</span></li>
+          <li><b>심리검사</b><span>TCI 기질검사</span></li>
         </ul>
 
         <p class="addr">
