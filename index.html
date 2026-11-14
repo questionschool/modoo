@@ -9,10 +9,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="대구모두심리상담센터" />
 <meta property="og:description" content="조금 덜 두렵고, 조금 더 안심이 되기를. 대구 서구의 작은 상담공간." />
-<!-- modoo.be 연결이 끝나면 아래 두 줄의 주소를 https://modoo.be/ 로 바꾸세요 -->
-<meta property="og:url" content="https://modoo.questionschool.net/" />
+<link rel="canonical" href="https://daegumodoo.com/" />
+<meta property="og:url" content="https://daegumodoo.com/" />
 <meta property="og:locale" content="ko_KR" />
-<meta property="og:image" content="https://modoo.questionschool.net/images/og-image.png" />
+<meta property="og:image" content="https://daegumodoo.com/images/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -392,6 +392,14 @@
     .scale div{ opacity:1; transform:none; }
     html{ scroll-behavior:auto; }
   }
+
+  .nav-group{color:var(--indigo);font-weight:700;white-space:nowrap}
+  .group-opening{background:#e9ecdf}
+  .group-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .group-figure{display:block;border-radius:14px;overflow:hidden}
+  .group-opening .eyebrow{color:#506b3c;letter-spacing:.12em}
+  .group-opening h2{margin-bottom:22px}
+  @media(max-width:800px){.bar{height:auto;min-height:64px;flex-wrap:wrap;padding-block:14px;gap:8px}.bar nav{width:100%;flex-wrap:wrap;gap:8px 20px}.group-grid{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 <body>
@@ -403,6 +411,7 @@
       <a href="#greeting">인사</a>
       <a href="#profile">상담사</a>
       <a href="#topics" class="nav-hide">상담 영역</a>
+      <a href="/group/" class="nav-group">집단상담</a>
       <a href="#visit">오시는 길</a>
       <a href="https://blog.naver.com/ggetmam" target="_blank" rel="noopener" class="nav-blog">블로그</a>
     </nav>
@@ -427,6 +436,20 @@
       <div class="actions">
         <a class="btn btn-solid" href="#visit">상담 문의하기</a>
         <a class="btn btn-ghost" href="#profile">상담사 소개 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="group-opening" id="group" aria-labelledby="group-title">
+    <div class="wrap group-grid">
+      <a href="/group/" class="group-figure" aria-label="모두의 집단상담 초대장 보기"><img src="/group/assets/circle.webp" alt="함께 둘러앉아 서로의 이야기를 듣는 사람들" width="1536" height="1024" loading="lazy" /></a>
+      <div>
+        <p class="eyebrow">집단상담 오픈 준비 중</p>
+        <h2 id="group-title">함께 앉아,<br />마음을 나누는 시간.</h2>
+        <p class="lead">모두의 집단상담에 초대합니다.</p>
+        <p>나를 이해하고, 타인과 연결되며, 삶의 의미를 함께 탐색하는 자리입니다. 심리상담사 농담과 함께 서로의 이야기에 귀 기울입니다.</p>
+        <p class="note">2026년 12월 또는 2027년 1월 시작 예정 · 정확한 시작일은 추후 안내합니다.</p>
+        <a class="btn btn-solid" href="/group/">집단상담 초대장 보기 →</a>
       </div>
     </div>
   </section>
